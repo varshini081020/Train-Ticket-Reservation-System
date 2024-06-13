@@ -1,16 +1,22 @@
+package com.shashi.service;
+
+import java.util.List;
+
+import com.shashi.beans.UserBean;
+import com.shashi.beans.TrainException;
+
 public interface UserService {
 
-    public UserBean getUserByEmailId(String userEmailId) throws TrainException;
+	public UserBean getUserByEmailId(String userEmailId) throws TrainException;
 
-    public List<UserBean> getAllUsers() throws TrainException;
+	public List<UserBean> getAllUsers() throws TrainException;
 
-    // Intentional bug: Changed return type from String to void
-    public void updateUser(UserBean customer);  // Should return String according to the original design
+	public String updateUser(UserBean customer);
 
-    public String deleteUser(UserBean customer);
+	public String deleteUser(UserBean customer);
 
-    public String registerUser(UserBean customer);
-    
-    public UserBean loginUser(String username, String password) throws TrainException;
+	public String registerUser(UserBean customer);
+	
+	public UserBean loginUser(String username, String password) throws TrainException;
 
-}
+};
