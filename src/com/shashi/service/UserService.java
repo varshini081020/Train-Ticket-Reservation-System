@@ -17,6 +17,6 @@ public interface UserService {
 
 	public String registerUser(UserBean customer);
 	
-	public UserBean loginUser(String username, String password) throws TrainException;
+	public UserBean loginUser(String username, String passwords) throws TrainException;
 
 }
