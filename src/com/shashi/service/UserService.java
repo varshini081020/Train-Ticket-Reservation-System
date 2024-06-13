@@ -19,4 +19,4 @@ public interface UserService {
 	
 	public UserBean loginUser(String username, String password) throws TrainException;
 
-};
+}
