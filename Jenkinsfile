@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git https://github.com/santhosh8328/Train-Ticket-Reservation-System.git
+                git 'https://github.com/santhosh8328/Train-Ticket-Reservation-System.git'
             }
         }
         
