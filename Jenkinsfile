@@ -1,17 +1,21 @@
 pipeline {
-    agent any
+    agent { label 'python' }
 
     stages {
-        stage('Checkout') {
+        stage('Start') {
             steps {
-                git 'https://github.com/santhosh8328/Train-Ticket-Reservation-System.git'
+                echo "Starting pipeline for branch: ${env.BRANCH_NAME}"
             }
         }
-        
         stage('Build') {
             steps {
-                sh 'mvn clean package'
+                echo "Building on ${env.BRANCH_NAME}"
             }
+        }
+    }
+    post {
+        always {
+            echo "Finished pipeline for ${env.BRANCH_NAME}"
         }
     }
 }
