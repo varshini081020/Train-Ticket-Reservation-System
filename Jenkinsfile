@@ -13,6 +13,7 @@ pipeline {
             }
         }
     }
+    
     post {
         always {
             echo "Finished pipeline for ${env.BRANCH_NAME}"
