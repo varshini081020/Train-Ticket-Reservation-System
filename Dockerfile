@@ -10,7 +10,7 @@ COPY target/*.war /usr/local/tomcat/webapps/ROOT.war
 # Expose default Tomcat port
 EXPOSE 8080
 
-#echo ff
+#echo ffgmr
 
 # Start Tomcat server
 CMD ["catalina.sh", "run"]
